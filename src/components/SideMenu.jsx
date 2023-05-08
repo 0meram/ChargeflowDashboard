@@ -17,7 +17,7 @@ const SideMenu = () => {
 
     return (
         <aside className={`aside ${asideActive ? 'active' : ''}`}>
-            <h2 className="aside_title"><div><Store /></div>store name<Arrow /></h2>
+            <div className="aside_title"><span><Store /></span><h2>store name</h2><Arrow /></div>
             <ul className="aside_list">
                 <div><Home /><li>Home</li></div>
                 <br />

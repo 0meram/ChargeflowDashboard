@@ -7,11 +7,11 @@ import { ReactComponent as Search } from '../icons/search.svg';
 const Header = () => {
     return (
         <header className="header">
-            <div className="header_search"><Search />Search</div>
+            <div className="header_search"><Search /><span>Search...</span></div>
             <div className="header_icons">
-                <div className="header_icon"><Avatar /></div>
-                <div className="header_icon"><Info /></div>
-                <div className="header_icon"><Bell /></div>
+                <div><Avatar /></div>
+                <div><Info /></div>
+                <div><Bell /></div>
             </div>
         </header>
     )
