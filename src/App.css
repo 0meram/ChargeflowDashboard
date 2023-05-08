@@ -1,9 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  color: white;
+  color: #1A1F36;
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: SF Pro Text;
   font-size: 15px;
 }
 
@@ -13,8 +13,7 @@ body {
   grid-template-rows: 50px 1fr 50px;
   grid-template-areas:
     'header'
-    'main'
-    'footer';
+    'main';
   height: 100vh;
 }
 
@@ -31,17 +30,23 @@ body {
 .main {
   grid-area: main;
   background-color: white;
+  padding: 24px;
 }
 
-
-/* flexing header and footer */
-.header,
-.footer {
+/* flexing header */
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: darkblue;
+  color: rgb(0, 0, 0);
   padding: 0 15px;
+  border: 1px solid #E3E8EE
+}
+
+
+.header_icons {
+  display: flex;
+  margin: 2px;
 }
 
 /* flexing aside */
@@ -53,82 +58,123 @@ body {
   position: fixed;
   overflow-y: auto;
   z-index: 2;
-  /* transform: translateX(-245px); */
+  transform: translateX(-245px);
+  border: 1px solid #E3E8EE;
 }
 
 .aside.active {
   transform: translateX(0);
 }
 
+.aside_title {
+  padding: 5px 5px 5px 20px;
+  margin-top: 10px;
+}
+
 .aside_list {
   padding: 0;
   margin-top: 10px;
-  /* list-style-type: none; */
+  list-style-type: none;
 }
 
-.aside_list-item {
-  padding: 20px 20px 20px 40px;
+.aside_list li {
+  padding: 5px 5px 5px 20px;
   color: #1A1F36;
+  display: flex;
 }
 
-.aside_list-item:hover {
+.aside_list li:hover {
   background-color: rgb(112, 112, 112);
   cursor: pointer;
 }
 
 /* Layout for main content overview and its cards */
-.main_overview {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  border-bottom: 1px solid lightgreen;
-}
 
-.overview_card {
-  flex-basis: 250px;
-  flex-grow: 1;
-  margin: 10px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  height: 100px;
-  border: 1px solid darkblue;
-  border-radius: 4px;
-  color: darkblue;
+.main_title {
+  border-bottom: 1px solid #E3E8EE;
 }
 
 /* Layout for main-cards section // below main_overview */
-.main_cards {
-  margin: 10px;
+
+.charts {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 500px 200px 300px;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-areas:
+    'chart1'
+    'chart2'
+    'main_chart';
+  padding: 10px;
+}
+
+.chart1,
+.chart2,
+.main_chart {
+  padding: 20px;
+  border: 1px solid #E3E8EE;
+  border-left: #E3E8EE;
+}
+
+.main_chart {
+  grid-area: main_chart;
+}
+
+.chart1 {
+  grid-area: chart1;
+}
+
+.chart2 {
+  grid-area: chart2;
+}
+
+.reports {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 200px);
   grid-template-areas:
     'card1'
     'card2'
-    'card3';
-  grid-gap: 10px;
+    'card3'
+    'card4'
+    'card5'
+    'card6';
+  padding: 10px;
 }
 
-.card {
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
   padding: 20px;
-  border: 1px solid tomato;
-  border-radius: 4px;
-  color: tomato;
+  border: 1px solid #E3E8EE;
 }
 
-.card:first-child {
+.card1 {
   grid-area: card1;
 }
 
-.card:nth-child(2) {
+.card2 {
   grid-area: card2;
 }
 
-.card:nth-child(3) {
+.card3 {
   grid-area: card3;
 }
+
+.card4 {
+  grid-area: card4;
+}
+
+.card5 {
+  grid-area: card5;
+}
+
+.card6 {
+  grid-area: card6;
+}
+
 
 /* responsive layout */
 @media only screen and (min-width: 750px) {
@@ -138,8 +184,7 @@ body {
     grid-template-rows: 50px 1fr 50px;
     grid-template-areas:
       'aside header'
-      'aside main'
-      'aside footer';
+      'aside main';
     height: 100vh;
   }
 
@@ -150,28 +195,24 @@ body {
     transform: translateX(0);
   }
 
-  .main_cards {
-    margin: 10px;
+  .charts {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 200px 300px;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 100px 100px;
     grid-template-areas:
-      'card1 card2'
-      'card1 card3';
-    grid-gap: 10px;
+      'main_chart  chart1'
+      'main_chart  chart2';
+    padding: 10px;
   }
 
-  .menu-icon {
-    position: fixed;
-    display: flex;
-    top: 2px;
-    left: 8px;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    cursor: pointer;
-    padding: 12px;
-    color: black;
+  .reports {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-template-areas:
+      'card1 card2 card3'
+      'card4 card5 card6';
+    padding: 10px;
   }
 
   .header_search {
