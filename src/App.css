@@ -147,18 +147,43 @@ body {
   margin-top: 32px;
 }
 
-.chart_card{
+
+.main_chart_data {
+  display: flex;
+}
+
+.main_chart_data div{
+  width: 200px;
+}
+
+.chart_card {
   display: flex;
   justify-content: space-between
 }
 
-.chart_card_info div{
-padding: 3px;
+.chart_card_info div {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
 }
 
-.card_view{
+.chart_card_info h3 {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 8px 0px 10px 0px;
+}
+
+.chart_card_info span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.card_view {
   color: #5469D4;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .charts {
@@ -173,8 +198,7 @@ padding: 3px;
 }
 
 .chart1,
-.chart2,
-.main_chart {
+.chart2 {
   padding: 20px;
 }
 
@@ -182,6 +206,7 @@ padding: 3px;
   grid-area: main_chart;
   border-top: 1px solid #E3E8EE;
   border-left: #E3E8EE;
+  padding: 20px 20px 20px 0px;
 }
 
 .chart1 {

@@ -11,8 +11,16 @@ const App = () => {
     setAsideActive(!asideActive);
   };
 
+  const styles = `
+  .recharts-cartesian-axis-line {
+    stroke: #C2C7CF;
+    stroke-width: 1;
+  }
+`;
+
   return (
     <div className={`grid-container ${asideActive ? 'aside-active' : ''}`}>
+      <style>{styles}</style>
       <Header/>
       <SideMenu/>
       <Main/>
