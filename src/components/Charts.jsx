@@ -41,8 +41,6 @@ const Charts = () => {
     { name: 'N/A' },
     { name: 'N/A' },
     { name: 'N/A' },
-    { name: 'N/A' },
-    { name: 'N/A' },
     { name: '23:59' },
   ]
 
@@ -50,31 +48,36 @@ const Charts = () => {
     <div className="charts">
       <div className="main_chart">
         <div className="main_chart_data">
-          <div>
+          <div className="main_chart_time">
             <div>
               Gross volume
-              <span>
+              <icon>
                 <Arrow />
-              </span>
+              </icon>
             </div>
-            <div>€1,452.25</div>
+            <span>€1,452.25</span>
           </div>
-          <div>
+          <div className="main_chart_time">
             <div>
               Yesterday
-              <span>
+              <icon>
                 <Arrow />
-              </span>
+              </icon>
             </div>
-            <div>€1,253.61</div>
+            <div className="main_chart_past">€1,253.61</div>
           </div>
         </div>
-        <ResponsiveContainer width="100%" height={160}>
+        <div>04:00</div>
+        <ResponsiveContainer width="100%" height={150}>
           <LineChart
             data={data}
-            margin={{ top: 20, right: 0, left: 0, bottom: 0 }}
+            margin={{ top: 20, right: 0, left: 0, bottom: 20 }}
           >
-            <CartesianGrid strokeDasharray="0" horizontal={false} />
+            <CartesianGrid
+              strokeDasharray="0"
+              horizontal={false}
+              stroke="#E3E8EE"
+            />
             <XAxis
               dataKey="name"
               interval="preserveStartEnd"
@@ -83,13 +86,16 @@ const Charts = () => {
                 payload.value === '00:00' ||
                 payload.value === 'Now, 12:00' ||
                 payload.value === '23:59' ? (
-                  <text x={x} y={y} dy={6} textAnchor="middle">
+                  <text x={x} y={y} dy={6} textAnchor="middle" fontSize={12}>
                     {payload.value}
                   </text>
                 ) : null
               }
             />
-            <Tooltip />
+            <Tooltip
+              labelFormatter={(value) => `Time: ${value}`}
+              enabled={false}
+            />
             <Line type="linear" dataKey="value" stroke="#5469D4" dot={false} />
           </LineChart>
         </ResponsiveContainer>
