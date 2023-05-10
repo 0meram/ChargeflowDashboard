@@ -162,9 +162,14 @@ body {
   grid-gap: 0px;
 }
 
+.main_chart_time {
+  /* display: flex; */
+}
+
 .main_chart_time>div {
   display: flex;
   margin-bottom: 7px;
+  align-items: center;
 }
 
 .main_chart_time>div>icon {
@@ -262,44 +267,109 @@ body {
 
 .reports {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 0px;
 }
 
 .report {
-  /* Common styles for all cards */
-  padding: 20px 40px 32px 0px;
+  /* padding: 20px 40px 32px 0px; */
   max-height: 200px;
-  padding: 20px 20px 20px 0px;
+  padding: 20px;
 }
 
+.report_chart_data {
+  display: flex;
+}
+
+.report_chart_data {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-gap: 0px;
+}
+
+.report_chart_time {
+}
+.report_title {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.report_chart_time_view {
+  text-align: right;
+}
+
+.report_chart_time>div {
+  display: flex;
+  margin-bottom: 7px;
+  align-items: center;
+  width: fit-content;
+}
+
+.report_chart_time>div>icon {
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.report_chart_time>span {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.report_chart_past {
+  font-size: 16px;
+  color: #697386;
+  margin-bottom: 3px;
+}
+
+
 .report.card1 {
-/* border-top: 1px solid #E3E8EE; */
-/* border-left: 1px solid #E3E8EE; */
 }
 
 .report.card2 {
-  /* border: 1px solid #E3E8EE; */
 }
 
 .report.card3 {
-  /* border-top: 1px solid #E3E8EE; */
+
 }
 
 .report.card4 {
-  /* Styles specific to card with ID 1 */
-  color: red;
+
 }
 
 .report.card5 {
-  /* Styles specific to card with ID 2 */
-  color: blue;
+
 }
 
 .report.card6 {
-  /* Styles specific to card with ID 3 */
-  color: green;
+
 }
+
+.percent_span {
+  width: 41px;
+  height: 18px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.percent_span.positive {
+  background: #cbf4c9;
+}
+
+.percent_span.zero {
+  background: #e3e8ee;
+}
+
+.percent_span.negative {
+  background: #f8e5ba;
+}
+
 
 
 /* responsive layout */
@@ -331,14 +401,13 @@ body {
     padding: 0px;
   }
 
-  .reports {
+  /* .reports {
     display: grid;
     grid-template-columns: repeat(3, minmax(180px, 1fr));
-    grid-template-rows: auto;
-    /* grid-template-rows: 200px; */
+    grid-template-rows: 200px;
     grid-gap: 0px;
     padding: 0;
-  }
+  } */
 
   .header_search {
     margin-left: 24px;
