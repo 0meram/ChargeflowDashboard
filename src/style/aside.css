@@ -1,0 +1,71 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 270px;
+    position: fixed;
+    overflow-y: auto;
+    z-index: 2;
+    transform: translateX(-270px);
+    border: 1px solid #e3e8ee;
+    background-color: #F7FAFC;
+}
+
+.aside.active {
+    transform: translateX(0);
+}
+
+.aside_title {
+    margin: 16px 10.52px 38px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.aside_title h2 {
+    margin: 0px 10.52px 0px 20px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.aside_title span {
+    width: 28px;
+    height: 28px;
+    background: #ffffff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 2px 5px rgba(60, 66, 87, 0.08);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside_list {
+    padding: 0;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.aside_list div {
+    padding: 5px 5px 5px 20px;
+    color: #1a1f36;
+    display: flex;
+    height: 17px;
+}
+
+.aside_list li {
+    margin-left: 15px;
+}
+
+.aside_list div:hover {
+    background-color: rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 750px) {
+    .aside {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        transform: translateX(0);
+    }
+}

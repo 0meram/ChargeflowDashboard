@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #1A1F36;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(355px, 1fr);
+    grid-template-rows: 17px 1fr 50px;
+    grid-template-areas:
+        'header'
+        'main';
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+
+@media only screen and (min-width: 750px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: minmax(270px, 1fr);
+        grid-template-rows: 50px 100px 50px;
+        grid-template-areas:
+            'aside header'
+            'aside main';
+        height: 100vh;
+    }
+
+}

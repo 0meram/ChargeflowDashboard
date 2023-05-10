@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ReactComponent as Payment } from '../icons/payments.svg';
 import { ReactComponent as Balance } from '../icons/balance.svg';
 import { ReactComponent as Product } from '../icons/product.svg';
@@ -11,13 +11,13 @@ import { ReactComponent as Developer } from '../icons/developer.svg';
 import { ReactComponent as Costumer } from '../icons/costumers.svg';
 import { ReactComponent as Arrow } from '../icons/arrow.svg';
 import { ReactComponent as Home } from '../icons/home.svg';
+import '../style/aside.css'
 
 const SideMenu = () => {
-    const [asideActive, setAsideActive] = useState(false);
 
     return (
-        <aside className={`aside ${asideActive ? 'active' : ''}`}>
-            <div className="aside_title"><span><Store /></span><h2>store name</h2><Arrow /></div>
+        <aside className="aside">
+            <div className="aside_title"><span><Store /></span><h2>Store name</h2><Arrow /></div>
             <ul className="aside_list">
                 <div><Home /><li>Home</li></div>
                 <br />
@@ -28,7 +28,7 @@ const SideMenu = () => {
                 <div><Product /><li>Products</li></div>
                 <div><Report /><li>Reports</li></div>
                 <br />
-                <div><Payment /><li>Developers</li></div>
+                <div><Developer /><li>Developers</li></div>
                 <div><Toggle /><li>View test data</li></div>
                 <div><Settings /><li>Settings</li></div>
             </ul>

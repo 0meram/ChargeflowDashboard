@@ -1,0 +1,124 @@
+.charts_wrapper {
+    padding: 0px 40px 0px 40px;
+    border-bottom: 1px solid #E3E8EE;
+}
+
+.charts_wrapper h1 {
+    margin-top: 32px;
+}
+
+.main_chart_data {
+    display: flex;
+}
+
+.main_chart_data div {
+    width: 200px;
+}
+
+.main_chart_data {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 178px));
+    grid-gap: 0px;
+}
+
+.main_chart_time>div {
+    display: flex;
+    margin-bottom: 7px;
+    align-items: center;
+}
+
+.main_chart_time>div>icon {
+    margin-left: 7px;
+}
+
+.main_chart_time>span {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.main_chart_past {
+    font-size: 16px;
+    color: #697386;
+    margin-bottom: 3px;
+}
+
+.chart_card {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.chart_card_info div {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4F566B;
+}
+
+.chart_card_info h3 {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 8px 0px 10px 0px;
+}
+
+.chart_card_info span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4F566B;
+}
+
+.card_view {
+    color: #5469D4;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: minmax(355px, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+        'chart1'
+        'chart2'
+        'main_chart';
+    padding: 10px;
+}
+
+.chart1,
+.chart2 {
+    padding: 20px;
+    max-width: 378px;
+}
+
+.main_chart {
+    grid-area: main_chart;
+    border-top: 1px solid #E3E8EE;
+    border-left: #E3E8EE;
+    padding: 20px 20px 20px 0px;
+}
+
+.chart1 {
+    grid-area: chart1;
+    border-top: 1px solid #E3E8EE;
+    border-left: 1px solid #E3E8EE;
+    border-bottom: 1px solid #E3E8EE;
+}
+
+.chart2 {
+    grid-area: chart2;
+    border-left: 1px solid #E3E8EE;
+}
+
+@media only screen and (min-width: 750px) {
+    .charts {
+        display: grid;
+        grid-template-columns: minmax(0, 712px) minmax(0, 378px);
+        grid-template-rows: 113px 113px;
+        grid-template-areas:
+            'main_chart  chart1'
+            'main_chart  chart2';
+        padding: 0px;
+    }
+}

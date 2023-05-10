@@ -1,47 +1,15 @@
 import React from 'react'
 import { ReactComponent as Arrow } from '../icons/arrow.svg'
+import { data } from '../data/mainChartData'
+import '../style/charts.css'
 import {
   LineChart,
   Line,
   XAxis,
-  YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from 'recharts'
-
-const data = [
-  { name: '00:00', value: 100 },
-  { name: 'N/A', value: 110 },
-  { name: 'N/A', value: 130 },
-  { name: 'N/A', value: 210 },
-  { name: 'N/A', value: 230 },
-  { name: 'N/A', value: 300 },
-  { name: 'N/A', value: 130 },
-  { name: 'N/A', value: 80 },
-  { name: 'N/A', value: 210 },
-  { name: 'N/A', value: 210 },
-  { name: 'N/A', value: 230 },
-  { name: 'N/A', value: 300 },
-  { name: 'N/A', value: 130 },
-  { name: 'Now, 12:00', value: 180 },
-  { name: 'Now, 12:00', value: 180 },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: 'N/A' },
-  { name: '23:59' },
-]
 
 const Charts = () => {
   return (

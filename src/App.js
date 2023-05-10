@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './components/Header';
-import './App.css';
+import './style/main.css'
 import SideMenu from './components/SideMenu';
 import Main from './components/Main';
 
 const App = () => {
-  const [asideActive, setAsideActive] = useState(false);
-
-  const toggleAside = () => {
-    setAsideActive(!asideActive);
-  };
 
   const styles = `
   .recharts-cartesian-axis-line {
@@ -19,11 +14,11 @@ const App = () => {
 `;
 
   return (
-    <div className={`grid-container ${asideActive ? 'aside-active' : ''}`}>
+    <div className='grid-container'>
       <style>{styles}</style>
-      <Header/>
-      <SideMenu/>
-      <Main/>
+      <Header />
+      <SideMenu />
+      <Main />
     </div>
   );
 };
