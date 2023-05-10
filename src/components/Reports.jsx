@@ -12,7 +12,6 @@ import {
     ResponsiveContainer,
 } from 'recharts'
 
-
 const Reports = () => {
     return (
         <div className="reports">
@@ -21,9 +20,7 @@ const Reports = () => {
                     <div className="report_chart_data">
                         <div className="report_chart_time">
                             <div>
-                                <span className='report_title'>
-                                    {report.title}
-                                </span>
+                                <span className="report_title">{report.title}</span>
                                 <icon>
                                     <Arrow />
                                 </icon>
@@ -32,10 +29,10 @@ const Reports = () => {
                                 </icon>
                                 <span
                                     className={`percent_span ${report.percent > 0
-                                        ? 'positive'
-                                        : report.percent === 0
-                                            ? 'zero'
-                                            : 'negative'
+                                            ? 'positive'
+                                            : report.percent === 0
+                                                ? 'zero'
+                                                : 'negative'
                                         }`}
                                 >
                                     {report.percent === 0 ? '0.0' : report.percent}%
@@ -48,7 +45,7 @@ const Reports = () => {
                             <div className="report_chart_past">{report.smallNum}</div>
                         </div>
                     </div>
-                    <ResponsiveContainer width="100%" height={180}>
+                    <ResponsiveContainer width="100%" height={165}>
                         <LineChart
                             data={report.chartData}
                             margin={{ top: 20, right: 0, left: 0, bottom: 20 }}
