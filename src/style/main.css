@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url("C:\Users\omer9\Desktop\fonts\SFPro\OpenType\SF-Pro-Text-Regular.otf") format('woff2'),
+        url("C:\Users\omer9\Desktop\fonts\SFPro\OpenType\SF-Pro-Text-Light.otf") format('woff');
+}
+
 body {
     margin: 0;
     padding: 0;
     color: #1A1F36;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
+    font-family: 'SF Pro Text', sans-serif;
     font-size: 14px;
 }
 

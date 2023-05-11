@@ -28,7 +28,7 @@ const SideMenu = () => {
                 <div><Report /><li>Reports</li></div>
                 <br />
                 <div><Payment /><li>Developers</li></div>
-                <div><Toggle /><li>View test data</li></div>
+                <div><Toggle /><span className="fix_side_push">View test data</span></div>
                 <div><Settings /><li>Settings</li></div>
             </ul>
         </aside>
