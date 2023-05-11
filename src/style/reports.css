@@ -127,6 +127,7 @@
 
     .report.card1 {
         border: none;
+        padding: 40px 20px 0px 20px;
     }
 
     .report.card2 {
@@ -147,5 +148,24 @@
 
     .report.card6 {
         border: none;
+    }
+
+    .reports_wrapper h1 {
+        padding-left: 15px;
+    }
+
+    .filters {
+        padding-left: 20px;
+    }
+
+    .report {
+        max-height: 200px;
+        padding: 40px 20px 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .reports_wrapper {
+        padding: 165px 0px 0px 0px;
     }
 }

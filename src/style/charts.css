@@ -78,19 +78,19 @@
 
 .charts {
     display: grid;
-    grid-template-columns: minmax(355px, 1fr);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: minmax(0px, 1fr);
+    grid-template-rows: repeat(3, 100px);
     grid-template-areas:
         'chart1'
         'chart2'
         'main_chart';
-    padding: 10px;
+    padding: 0px;
 }
 
 .chart1,
 .chart2 {
-    padding: 20px;
-    max-width: 378px;
+    padding: 20px 0px 20px 20px;
+    max-width: 580px;
 }
 
 .main_chart {
@@ -122,4 +122,32 @@
             'main_chart  chart2';
         padding: 0px;
     }
+}
+
+@media only screen and (max-width: 850px) {
+    .chart1 {
+        border: none;
+        border-bottom: 1px solid #E3E8EE;
+        padding: 0px 0px 20px 10px;
+    }
+
+    .chart2 {
+        border: none;
+        padding: 20px 0px 0px 10px;
+    }
+
+    .main_chart {
+        border: none;
+        padding: 46px 0px 0px 0px;
+    }
+
+    .charts_wrapper {
+        border: none;
+        padding: 0px 10px 0px 20px;
+    }
+
+    .charts_wrapper h1 {
+        padding: 0px 0px 0px 20px;
+    }
+
 }

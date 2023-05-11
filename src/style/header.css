@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     color: rgb(0, 0, 0);
-    padding: 0 15px;
+    padding: 0 40px;
     border-bottom: 1px solid #E3E8EE;
     height: 57px;
 }
@@ -41,4 +41,18 @@
         position: fixed;
         transform: translateX(0);
     }
+}
+
+
+@media only screen and (max-width: 900px) {
+.header {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    padding: 0 40px;
+    border-bottom: 1px solid #E3E8EE;
+    height: 57px; */
+}
+
 }

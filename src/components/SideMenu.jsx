@@ -7,7 +7,6 @@ import { ReactComponent as Store } from '../icons/store.svg';
 import { ReactComponent as Toggle } from '../icons/toggle.svg';
 import { ReactComponent as Account } from '../icons/acounts.svg';
 import { ReactComponent as Report } from '../icons/report.svg';
-import { ReactComponent as Developer } from '../icons/developer.svg';
 import { ReactComponent as Costumer } from '../icons/costumers.svg';
 import { ReactComponent as Arrow } from '../icons/arrow.svg';
 import { ReactComponent as Home } from '../icons/home.svg';
@@ -28,7 +27,7 @@ const SideMenu = () => {
                 <div><Product /><li>Products</li></div>
                 <div><Report /><li>Reports</li></div>
                 <br />
-                <div><Developer /><li>Developers</li></div>
+                <div><Payment /><li>Developers</li></div>
                 <div><Toggle /><li>View test data</li></div>
                 <div><Settings /><li>Settings</li></div>
             </ul>

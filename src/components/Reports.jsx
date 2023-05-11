@@ -45,10 +45,10 @@ const Reports = () => {
                             <div className="report_chart_past">{report.smallNum}</div>
                         </div>
                     </div>
-                    <ResponsiveContainer width="100%" height={165}>
+                    <ResponsiveContainer width="100%" height={100}>
                         <LineChart
                             data={report.chartData}
-                            margin={{ top: 20, right: 0, left: 0, bottom: 20 }}
+                            margin={{ top: 20, right: 0, left: 0, bottom: 5 }}
                         >
                             <CartesianGrid
                                 strokeDasharray="0"
