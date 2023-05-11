@@ -9,7 +9,6 @@ body {
     padding: 0;
     color: #1A1F36;
     box-sizing: border-box;
-    /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
     font-family: 'SF Pro Text', sans-serif;
     font-size: 14px;
 }
@@ -103,7 +102,7 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08), 0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    margin-right: 20px;
+    margin-right: 12px;
     padding: 0px 10px 0px 10px;
 }
 
