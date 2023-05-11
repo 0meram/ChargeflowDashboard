@@ -29,8 +29,87 @@ body {
     border-top: 1px solid #E3E8EE;
     margin-left: 40px;
     margin-right: 40px;
+    margin-top: 16px;
 }
 
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.compare_buttons_group {
+    display: flex;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.compare_buttons {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08), 0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 0px 8px 0px 8px;
+}
+
+.compare_buttons_past {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08), 0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 4px 0px 0px 4px;
+    padding: 0px 10px 0px 10px;
+}
+
+
+.compare_buttons_month {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08), 0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 4px 4px 0px;
+    padding: 0px 10px 0px 10px;
+}
+
+.compare_buttons_settings {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.compare_buttons_monthly {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08), 0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin-right: 20px;
+    padding: 0px 10px 0px 10px;
+}
+
+.icon_right {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.icon_left {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.compare_to {
+    padding: 0px 12px 0px 12px;
+}
 
 @media only screen and (min-width: 750px) {
     .grid-container {
@@ -42,5 +121,18 @@ body {
             'aside main';
         height: 100vh;
     }
+}
 
+@media only screen and (max-width: 900px) {
+    .compare_to {
+        display: none;
+    }
+
+    .compare_buttons_settings {
+        display: none;
+    }
+
+    .compare_buttons {
+        display: none;
+    }
 }
