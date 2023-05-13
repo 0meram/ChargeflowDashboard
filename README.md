@@ -15,9 +15,7 @@ or
 
 yarn install
 
-# Usage
-
-npm start
+npm i recharts
 
 # Contributing
 Contributions to this project are welcome. To contribute:

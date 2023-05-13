@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'SF Pro Text';
-    src: url("C:\Users\omer9\Desktop\fonts\SFPro\OpenType\SF-Pro-Text-Regular.otf") format('woff2'),
-        url("C:\Users\omer9\Desktop\fonts\SFPro\OpenType\SF-Pro-Text-Light.otf") format('woff');
+    src: url("../fonts/SF-Pro-Text-Regular.otf") format('woff2'),
+        url("../fonts/SF-Pro-Text-Light.otf") format('woff');
 }
 
 body {
