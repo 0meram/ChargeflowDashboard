@@ -14,13 +14,13 @@ const Header = () => {
       </div>
       <div className="header_icons">
         <div>
-          <Avatar />
+          <Bell />
         </div>
         <div>
           <Info />
         </div>
         <div>
-          <Bell />
+          <Avatar />
         </div>
       </div>
     </header>

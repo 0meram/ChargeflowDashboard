@@ -16,8 +16,10 @@ const App = () => {
   return (
     <div className='grid-container'>
       <style>{styles}</style>
+      <>
+        <SideMenu />
+      </>
       <Header />
-      <SideMenu />
       <Main />
     </div>
   );

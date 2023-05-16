@@ -1,14 +1,14 @@
 .aside {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 270px;
     position: fixed;
     overflow-y: auto;
     z-index: 2;
-    transform: translateX(-270px);
+    transform: translateX(-100%);
     border: 1px solid #e3e8ee;
     background-color: #F7FAFC;
+    height: 100%;
+    min-width: 270px;
 }
 
 .aside.active {
@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 
-.fix_side_push{
+.fix_side_push {
     margin: 0px 0px 0px 5px;
 }
 
@@ -69,7 +69,9 @@
     .aside {
         display: flex;
         flex-direction: column;
-        position: fixed;
+        width: 100%;
+        position: relative;
+        height: 100vh;
         transform: translateX(0);
     }
 }
