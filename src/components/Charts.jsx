@@ -19,18 +19,18 @@ const Charts = () => {
           <div className="main_chart_time">
             <div>
               Gross volume
-              <icon>
+              <span>
                 <Arrow />
-              </icon>
+              </span>
             </div>
             <span>€1,452.25</span>
           </div>
           <div className="main_chart_time">
             <div>
               Yesterday
-              <icon>
+              <span>
                 <Arrow />
-              </icon>
+              </span>
             </div>
             <div className="main_chart_past">€1,253.61</div>
           </div>

@@ -20,7 +20,7 @@ body {
     grid-template-areas:
         'header'
         'main';
-    height: 100vh;
+    height: 100%;
 }
 
 .header {
@@ -132,7 +132,7 @@ body {
         grid-template-areas:
             'aside header'
             'aside main';
-        height: 100vh;
+        height: 100%;
     }
 }
 

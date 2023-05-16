@@ -19,14 +19,14 @@ const Reports = () => {
                 <div key={report.id} className={`report card${report.id}`}>
                     <div className="report_chart_data">
                         <div className="report_chart_time">
-                            <div>
+                            <div className='report_title_icons'>
                                 <span className="report_title">{report.title}</span>
-                                <icon>
+                                <span>
                                     <Arrow />
-                                </icon>
-                                <icon>
+                                </span>
+                                <span>
                                     <SmallInfo />
-                                </icon>
+                                </span>
                                 <span
                                     className={`percent_span ${report.percent > 0
                                             ? 'positive'

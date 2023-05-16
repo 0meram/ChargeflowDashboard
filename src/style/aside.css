@@ -11,9 +11,6 @@
     min-width: 270px;
 }
 
-.aside.active {
-    transform: translateX(0);
-}
 
 .aside_title {
     margin: 16px 10.52px 38px 20px;
@@ -69,8 +66,8 @@
     .aside {
         display: flex;
         flex-direction: column;
-        width: 100%;
         position: relative;
+        width: 100%;
         height: 100vh;
         transform: translateX(0);
     }

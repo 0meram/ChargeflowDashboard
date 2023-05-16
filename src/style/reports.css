@@ -23,17 +23,21 @@
 }
 
 .report_chart_data {
-    display: flex;
-}
-
-.report_chart_data {
     display: grid;
-}
-
-.report_chart_data {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-areas:
+        'title_icons view';
     grid-gap: 0px;
+}
+
+
+.report_title_icons {
+    white-space: normal;
+    overflow: auto;
+    text-overflow: ellipsis;
+    display: inline-block;
+    grid-area: title_icons;
+    max-width: 170%;
 }
 
 .report_title {
@@ -45,6 +49,7 @@
 
 .report_chart_time_view {
     text-align: right;
+    grid-area: view;
 }
 
 .report_chart_time>div {
@@ -54,7 +59,7 @@
     width: fit-content;
 }
 
-.report_chart_time>div>icon {
+.report_chart_time>div>span {
     margin-left: 7px;
     cursor: pointer;
 }
