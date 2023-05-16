@@ -1,7 +1,10 @@
 @font-face {
     font-family: 'SF Pro Text';
-    src: url("../fonts/SF-Pro-Text-Regular.otf") format('woff2'),
+    src: url("../fonts/SF-Pro-Text-Light.otf") format('woff2'),
         url("../fonts/SF-Pro-Text-Light.otf") format('woff');
+    font-family: 'SF Pro Display';
+    src: url("../fonts/SF-Pro-Display-Bold.otf") format('woff2'),
+        url("../fonts/SF-Pro-Display-Bold.otf") format('woff');
 }
 
 body {
